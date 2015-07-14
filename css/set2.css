@@ -2,8 +2,7 @@
  
 body {
    background: #222;
-   text-align:center;
-
+   
 }
  
 /*GALLERY*/
@@ -22,9 +21,8 @@ ul {
    height: 270px;
    width: 250px;
    margin: 25px;
-   float: left;
    overflow: hidden;
-     
+  display: inline-block;
    -webkit-border-radius: 1%;
       -moz-border-radius: 50%;
        border-radius: 20%;
@@ -34,7 +32,7 @@ ul {
 }
 
 .gallery li img {
-   margin-top: -70px;
+   margin-top: -140px;
      
   -webkit-transition: margin 1.5s ease;
       -moz-transition: margin 1.5s ease;
@@ -53,7 +51,6 @@ opacity: 0.4;
    width: 100px;
    padding: 20px;
    position: relative;
-   left: 15%;
    top: 75%; /*set to 110% after this step!*/
      
    color: white;
@@ -69,11 +66,18 @@ opacity: 0.4;
            transition: top 0.5s ease;
 
 
+
+}
+
+.info{
+  opacity: 0;
+  -moz-transition: all 0.5s linear 5s;
+  transition: all 0.5s linear 5s;
 }
 
 .gallery li:hover img {
   margin-left: -30px;
- //margin-top: -90px;
+ //margin-top: -10px;
 filter: blur(10px);
 
 }
@@ -82,4 +86,10 @@ filter: blur(10px);
    top:30%;
 
 
+}
+
+.gallery li:hover .info{
+  opacity: 1;
+  -moz-transition: all 0.2s linear 0.2s;
+  transition: all 0.2s linear 0.2s;
 }
